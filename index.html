@@ -1,0 +1,494 @@
+<!DOCTYPE HTML>
+<html lang="uk">
+<head>
+	<title>Паттерни JavaScript</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=792, user-scalable=no">
+	<meta http-equiv="x-ua-compatible" content="ie=edge">
+	<link rel="stylesheet" href="shower/themes/ideil/styles/screen.css">
+</head>
+<body class="list">
+	<header class="caption">
+		<h1>Паттерни JavaScript</h1>
+		<p>Принципи написання гарного коду.</p>
+	</header>
+	<section class="slide cover" id="cover"><div>
+		<h2>Паттерни JavaScript</h2>
+		<p>Як це робимо ми в <a href="https://www.ideil.com">Ідейл</a></p>
+		<img src="pictures/Space_Ghost_MBP-Retina_-_2880x1800.jpg" width="1024" height="640" alt="">
+		<style>
+			#cover h2 {
+				margin: 0;
+				color: #fff;
+				font-size: 64px;
+				text-align: center;
+			}
+			#cover p {
+				margin: 400px 0 0;
+				font-size: 20px;
+				font-style: italic;
+				text-align: center;
+			}
+		</style>
+		<footer><a href="http://dribbble.com/shots/702565-Space-Ghost">Space Ghost</a>, шпалери від Mads Frantzen</footer>
+	</div></section>
+
+	<section class="slide"><div>
+		<header>
+			<h2>JavaScript</h2>
+		</header>
+		<ul>
+			<li>Найпоширеніша та найактивніша мова програмування на сьогодні</li>
+			<li>Створена в 1995</li>
+			<li>Налічує 323,938 активних репозиторіїв на GitHub (в 4 кварталі 2014)</li>
+			<li>15% від загальної кількості репозиторіїв на GitHub</li>
+			<li>3,461,415 оновлень за цей період</li>
+			<li>~10.69 оновлень на репозиторій</li>
+			<li>~6.10 відкритих проблем на репозиторій</li>
+		</ul>
+	</div></section>
+
+	<section class="slide cover"><div>
+		<img src="pictures/js-pie.png" width="1024" height="640" alt="">
+	</div></section>
+
+	<section class="slide"><div>
+		<h2>JavaScript або ECMAScript</h2>
+		<p>JavaScript (JS) – динамічна, об'єктно-орієнтованa мова програмування. Найчастіше використовується як частина браузера, що надає можливість коду на стороні клієнта взаємодіяти з користувачем, керувати браузером, асинхронно обмінюватися даними з сервером, змінювати структуру та зовнішній вигляд веб-сторінки. JavaScript класифікують як прототипну (підмножина об'єктно-орієнтованої), скриптову мову програмування з динамічною типізацією.</p>
+	</div></section>
+
+	<section class="slide"><div>
+		<p>JS має C-подібний синтаксис, але в порівнянні з мовою Сі має такі корінні відмінності:</p>
+		<ul>
+			<li>об'єкти з можливістю динамічної зміни типу через механізм прототипів</li>
+			<li>функції як об'єкти першого класу</li>
+			<li>обробка винятків</li>
+			<li>автоматичне приведення типів</li>
+			<li>автоматичне прибирання сміття</li>
+			<li>анонімні функції</li>
+		</ul>
+	</div></section>
+
+	<section class="slide"><div>
+		<pre>
+			<code>&lt;script type="text/javascript"&gt;</code>
+			<code>  alert('hello world');</code>
+			<code>&lt;/script&gt;</code>
+		</pre>
+		<pre>
+			<code>&lt;a href="delete.php"</code>
+			<code>  onclick="return confirm('Ви впевнені?');"&gt;Видалити&lt;/a&gt;</code>
+		</pre>
+		<pre>
+			<code>&lt;script type="text/javascript" src="script.js"&gt;</code>
+		</pre>
+	</div></section>
+
+	<section class="slide"><div>
+		<p>Приклад оголошення і використання класу в JavaScript (клас є одночасно функцією, оскільки функції — це об'єкти першого рівня):</p>
+		<pre>
+			<code>function MyClass() {</code>
+			<code>  this.myValue1 = 1;</code>
+			<code>  this.myValue2 = 2;</code>
+			<code>}</code>
+			<code>var mc = new MyClass();</code>
+			<code>mc.myValue1 = mc.myValue2 * 2;</code>
+		</pre>
+	</div></section>
+
+	<section class="slide"><div>
+		<h2>Фреймворки</h2>
+		<p>На сайті <a href="http://todomvc.com">TodoMVC</a> зібрано більше 63 реалізацій додатка задач на різних фрейморках та чистому js. Якщо 63 для вас – це небагато, тоді ви ще нічого не знаєте…</p>
+		<p>Щоденно цей сайт отримує десятки запитів на додавання нових реалізацій і далеко не всі з них туди можуть потрапити.</p>
+	</div></section>
+
+	<section class="slide"><div>
+		<h2>Приклад</h2>
+		<p>Одним з таких останніх запитів був Riot.js 2.0, який називає себе послідовником React від Facebook, але кращим деяких важливих аспектах.</p>
+		<p>Але ж React відносно нещодавно вийшов на сцену відкритого коду і ще навіть не досягнув версії 1.0… A Riot.js вже 2.0… Як таке може бути?</p>
+	</div></section>
+
+	<section class="slide cover"><div>
+		<img src="pictures/javascript-guy.jpg" width="1024" height="640" alt="">
+	</div></section>
+
+	<section class="slide shout"><div>
+		<h2>В нормальних мовах є стабільні фреймворки</h2>
+	</div></section>
+
+	<section class="slide cover"><div>
+		<img src="pictures/rise-of-angular.jpg" width="1024" height="640" alt="">
+	</div></section>
+
+	<section class="slide shout"><div>
+		<h2>Як встигнути за цим "прогресом"?</h2>
+	</div></section>
+
+	<section class="slide"><div>
+		<h2>Кожен фреймворк – це <b>набір стандартних паттернів</b></h2>
+		<p>Паттерн <b>Observer</b> використовується в моделях Backbone, в дата-біндінгу Angular та Knockout і викликає досить велике "Вау!". Хоче це просто відомий здавна паттерн, який можна реалізувати приблизно в 30 рядках коду. Інші можливості топових фреймворків реалізовані на подібних принципах.
+		</p>
+	</div></section>
+
+	<section class="slide"><div>
+		<h2>Що ж таке "паттерн"?</h2>
+		<p>Паттерни (шаблони) проектування програмного забезпечення — ефективні способи вирішення задач проектування програмного забезпечення.</p>
+		<p>Коли ми вивчаєм фреймворки — нам <b>потрібно перевчатись</b>, коли виходить нова версія і велика частина вашого досвіду стирається.</p>
+		<p>Коли ми вивчаєм принципи – вони залишаються.</p>
+	</div></section>
+
+	<section class="slide"><div>
+		<ul>
+			<li>Constructor</li>
+			<li>Module</li>
+			<li>Singleton</li>
+			<li>Observer</li>
+			<li>Mediator</li>
+			<li>Facade</li>
+			<li>Factory</li>
+			<li>Mixin</li>
+			<li>Decorator</li>
+		</ul>
+	</div></section>
+
+	<section class="slide"><div>
+		<h2>Конструктор</h2>
+		<p>В об'єктно-орієнтованих мовах конструктор – це спеціальний метод, що використовується для ініціалізації новоствореного об'єкту.</p>
+		<p>Конструктори використовуються для створення певних типів об'єктів – їх підготовки та обробки аргументів для присвоєння властивостей та методів.</p>
+	</div></section>
+
+	<section class="slide"><div>
+		<pre>
+			<code>function Car(model, year, km) {</code>
+			<code>  this.model = model;</code>
+			<code>  this.year = year;</code>
+			<code>  this.km = km;</code>
+			<code>}</code>
+			<code><mark class="comment">// Використання</mark></code>
+			<code>var civic = new Car("Honda Civic", 2009, 20000);</code>
+			<code>var mondeo = new Car("Ford Mondeo", 2010, 5000);</code>
+		</pre>
+	</div></section>
+
+	<section class="slide"><div>
+		<h2>Конструктор з прототипом</h2>
+		<pre>
+			<code>function Car(model, year, km) { … }</code>
+			<code>Car.prototype.toString = function() {</code>
+			<code>  return this.model + " з пробігом " + this.km</code>
+			<code>}</code>
+			<code><mark class="comment">// Використання</mark></code>
+			<code>var civic = new Car("Honda Civic", 2009, 20000);</code>
+			<code>console.log(civic.toString());</code>
+		</pre>
+	</div></section>
+
+	<section class="slide"><div>
+		<h2>Модуль</h2>
+		<p>Модулі – важлива складова будь-якої архітектури. Вони допомагають в організації та підтримці коду проекту.</p>
+		<p>Паттерн <b>Module</b> частково базується на об'єктних літералах і тому давайте познайомимся з ними.</p>
+	</div></section>
+
+	<section class="slide"><div>
+		<h2>Object Literals</h2>
+		<pre>
+			<code>var myObjectLiteral = {</code>
+			<code>  variableKey: variableValue,</code>
+			<code>  functionKey: function () {</code>
+			<code>    // …</code>
+			<code>  }</code>
+			<code>};</code>
+			<code>myObjectLiteral.newVariableKey = "Hello";</code>
+		</pre>
+	</div></section>
+
+	<section class="slide"><div>
+		<pre>
+			<code>var myModule = {</code>
+			<code>  config: {</code>
+			<code>    useCaching: true</code>
+			<code>  },</code>
+			<code>  say: function() {</code>
+			<code>    console.log("Кешування " +</code>
+			<code>      this.config.useCaching ? "увімкнено" : "вимкнено");</code>
+			<code>  }</code>
+			<code>};</code>
+		</pre>
+	</div></section>
+
+	<section class="slide"><div>
+		<h2>Приватність</h2>
+		<p>В js паттерн модуля використовується щоб емулювати концепт класів та контроль приватності змінних та методів.</p>
+		<p>Варто зазначити, що в JavaScript немає справжнього контролю приватності, так як тут відсутні модифікатори доступу. Реалізація модулів з приватними властивостями відбувається завдяки замиканням.</p>
+	</div></section>
+
+	<section class="slide"><div>
+		<pre>
+			<code>var testModule = (function () {</code>
+			<code>  var counter = 0;</code>
+			<code>  return {</code>
+			<code>    increment: function () { return counter++; },</code>
+			<code>    reset: function () {</code>
+			<code>      console.log("Counter:", counter);</code>
+			<code>      counter = 0;</code>
+			<code>    }</code>
+			<code>  };</code>
+			<code>})();</code>
+		</pre>
+	</div></section>
+
+	<section class="slide"><div>
+		<h2>Переваги</h2>
+		<ul>
+			<li>Організація</li>
+			<li>Приватність</li>
+		</ul>
+		<h2>Недоліки</h2>
+		<ul>
+			<li>Зміна видимості вимагає правок різних місцях</li>
+			<li>Неможливість написання юніт-тестів для приватних членів модуля</li>
+		</ul>
+	</div></section>
+
+	<section class="slide"><div>
+		<h2>Синглтон</h2>
+		<p>Синглтон (Одинак) гарантує, що клас матиме тільки один екземпляр і забезпечує глобальну точку доступу до цього екземпляра.</p>
+		<p>На практиці синглтон використовується коли тільки один об'єкт є необхідним для координації інших.</p>
+	</div></section>
+
+	<section class="slide"><div>
+		<pre>
+			<code>var mySingleton = (function () { var instance;</code>
+			<code>  function init() {</code>
+			<code>    var private = "private";</code>
+			<code>    return { public: "public"; };</code>
+			<code>  }</code>
+			<code>  return {</code>
+			<code>    getInstance: function() {</code>
+			<code>      if (!instance) instance = init();</code>
+			<code>      return instance; }</code>
+			<code>  };</code>
+			<code>})();</code>
+		</pre>
+	</div></section>
+
+	<section class="slide"><div>
+		<h2>Обсервер</h2>
+		<p>Обсервер (Спостерігач) — паттерн, в якому об'єкт тримає список залежних об'єктів та автоматично сповіщує їх про зміни стану.</p>
+		<p>Паттерн публікації/підписки є дуже подібним до обсервера та використовується в js навіть частіше.</p>
+	</div></section>
+
+	<section class="slide"><div>
+		<pre>
+			<code>var mailCounter = 0;</code>
+			<code>var subscriber1 = subscribe( "inbox/newMessage",</code>
+			<code>  function( topic, data ) {</code>
+			<code>    console.log( "A new message was received: ", topic );</code>
+			<code>});</code>
+			<code>var subscriber2 = subscribe( "inbox/newMessage",</code>
+			<code>  function( topic, data ) {</code>
+			<code>    mailCounter++;</code>
+			<code>});</code>
+		</pre>
+	</div></section>
+
+	<section class="slide"><div>
+		<pre>
+			<code>publish( "inbox/newMessage", [{</code>
+			<code>  sender: "hello@google.com",</code>
+			<code>  body: "Hey there! How are you doing today?"</code>
+			<code>}]);</code>
+		</pre>
+		<pre>
+			<code>unsubscribe( subscriber1 );</code>
+			<code>unsubscribe( subscriber2 );</code>
+		</pre>
+	</div></section>
+
+	<section class="slide"><div>
+		<h2>Переваги</h2>
+		<p><b>Observer</b> та <b>Publish/Subscribe</b> паттерни змушують нас продумувати зв'язки між різними частинами коду. Впровадження паттерна допомагає уникнути в'язкості коду, де кожен модуль звертається до інших напряму.</p>
+	</div></section>
+
+	<section class="slide"><div>
+		<h2>Недоліки</h2>
+		<p>Основні недоліки випливають з переваг: розділивши частини коду занадто сильно, можна втратити контроль над тим, що, де і коли відбувається.</p>
+		<p></p>
+	</div></section>
+
+	<section class="slide"><div>
+		<h2>Медіатор</h2>
+		<p>Паттерн <b>Mediator (Посередник)</b> визначає спосіб взаємодії множини об'єктів. Посередник забезпечує слабку зв'язаність системи, звільняючи об'єкти від необхідності явно посилатися один на одного, і дозволяючи тим самим незалежно змінювати взаємодії між ними.</p>
+	</div></section>
+
+	<section class="slide"><div>
+		<pre>
+			<code>var orgChart = {</code>
+			<code>  addNewEmployee: function(){</code>
+			<code>    var employeeDetail = this.getEmployeeDetail();</code>
+			<code>    employeeDetail.on("complete", function(employee){</code>
+			<code>      var managerSelector = this.selectManager(employee);</code>
+			<code>      managerSelector.on("save", function(employee){</code>
+			<code>        employee.save();</code>
+			<code>      });</code>
+			<code>    });</code>
+			<code>  }};</code>
+		</pre>
+	</div></section>
+
+	<section class="slide"><div>
+		<h2>Використання</h2>
+		<p>Медіатор найкраще використовувати, коли є 2 або більше об'єктів, які мають непрямий зв'язок або бізнес-логіку або їх процес роботи вимагає координації.</p>
+	</div></section>
+
+	<section class="slide"><div>
+		<h2>Переваги</h2>
+		<ul>
+			<li>Зменшує кількість каналів комунікації.</li>
+		</ul>
+		<h2>Недоліки</h2>
+		<ul>
+			<li>Єдина точка відмови</li>
+		</ul>
+	</div></section>
+
+	<section class="slide"><div>
+		<h2>Фасад</h2>
+		<p>Фасад призначений для об'єднання групи підсистем під один уніфікований інтерфейс, надаючи доступ до них через одну точку входу. Це дозволяє спростити роботу з підсистемами.</p>
+	</div></section>
+
+	<section class="slide"><div>
+		<pre>
+			<code>var addMyEvent = function( el,ev,fn ) {</code>
+			<code>   if ( el.addEventListener ) {</code>
+			<code>     el.addEventListener( ev,fn, false );</code>
+			<code>   } else if(el.attachEvent){</code>
+			<code>     el.attachEvent( "on" + ev, fn );</code>
+			<code>   } else {</code>
+			<code>     el["on" + ev] = fn;</code>
+			<code>   }</code>
+			<code>};</code>
+		</pre>
+	</div></section>
+
+	<section class="slide"><div>
+		<h2>Декоратор</h2>
+		<p>Декоратор, Decorator — структурний шаблон проектування, призначений для динамічного підключення додаткових можливостей до об'єкта. Шаблон Decorator надає гнучку альтернативу методу визначення підкласів з метою розширення функціональності.</p>
+	</div></section>
+
+	<section class="slide"><div>
+		<pre>
+			<code>function MacBook() {</code>
+			<code>  this.cost = function () { return 997; };</code>
+			<code>}</code>
+		</pre>
+		<pre>
+			<code>function memory( macbook ) {</code>
+			<code>  var v = macbook.cost();</code>
+			<code>  macbook.cost = function() {</code>
+			<code>    return v + 75;</code>
+			<code>  };</code>
+			<code>}</code>
+		</pre>
+	</div></section>
+
+	<section class="slide"><div>
+		<h2>Переваги</h2>
+		<ul>
+			<li>Дозволяє уникнути зміни об'єкта або створювати його субклас</li>
+		</ul>
+		<h2>Недоліки</h2>
+		<ul>
+			<li>Вводить в код багато невеликих, але схожих об'єктів.</li>
+		</ul>
+	</div></section>
+
+	<section class="slide"><div>
+		<h2>Фабрика</h2>
+		<p>Визначає інтерфейс для створення об'єкта, але залишає підкласам рішення про те, який саме клас інстанціювати. Фабричний метод дозволяє класу делегувати інстанціювання підкласам.</p>
+	</div></section>
+
+	<section class="slide"><div>
+		<h2>Застосування</h2>
+		<p>Слід використовувати паттерн <b>Factory</b> коли:</p>
+		<ul>
+			<li>класу невідомо заздалегідь, об'єкти яких саме класів йому потрібно створювати;</li>
+			<li>клас спроектовано так, щоб об'єкти, котрі він створює, специфікувалися підкласами;</li>
+			<li>клас делегує свої обов'язки одному з кількох допоміжних підкласів, та потрібно локалізувати знання про те, який саме підклас приймає ці обов'язки на себе.</li>
+		</ul>
+	</div></section>
+
+	<section class="slide"><div>
+		<h2>Car.js</h2>
+		<pre>
+			<code>function Car( options ) {</code>
+			<code>  this.doors = options.doors || 4;</code>
+			<code>  this.state = options.state || "brand new";</code>
+			<code>  this.color = options.color || "silver";</code>
+			<code>}</code>
+		</pre>
+	</div></section>
+
+	<section class="slide"><div>
+		<h2>Truck.js</h2>
+		<pre>
+			<code>function Truck( options ) {</code>
+			<code>  this.state = options.state || "used";</code>
+			<code>  this.wheelSize = options.wheelSize || "large";</code>
+			<code>  this.color = options.color || "blue";</code>
+			<code>}</code>
+		</pre>
+	</div></section>
+
+	<section class="slide"><div>
+		<pre>
+			<code>function VehicleFactory() {}</code>
+			<code>VehicleFactory.prototype.vehicleClass = Car;</code>
+			<code>VehicleFactory.prototype.createVehicle = function(options){</code>
+			<code>  switch(options.vehicleType){</code>
+			<code>    case "car":</code>
+			<code>      this.vehicleClass = Car;</code>
+			<code>      break;</code>
+		</pre>
+	</div></section>
+
+	<section class="slide"><div>
+		<pre>
+			<code>    case "truck":</code>
+			<code>      this.vehicleClass = Truck;</code>
+			<code>      break;</code>
+			<code>  }</code>
+			<code>  return new this.vehicleClass( options );</code>
+			<code>};</code>
+			<code>var carFactory = new VehicleFactory();</code>
+			<code>var car = carFactory.createVehicle( { vehicleType: "car",</code>
+			<code>  color: "yellow", doors: 6 } );</code>
+		</pre>
+	</div></section>
+
+	<section class="slide" id="finish"><div>
+		<style>
+		#finish img {
+			position: relative;
+			float: right;
+			right: -70px;
+		}
+		</style>
+		<header>
+			<h2>Паттерни JavaScript</h2>
+		</header>
+		<p><b>Едуард Пелеш, Ідейл</b></p>
+		<ul>
+			<li><a href="https://www.ideil.com/">www.ideil.com</a></li>
+			<li><a href="mailto:welcome@ideil.com">welcome@ideil.com</a></li>
+			<li><a href="http://litac.github.io/slides-patterns-20150515">http://litac.github.io/slides-patterns-20150515</a></li>
+		</ul>
+		<p>Луцьк, 2015</p>
+	</div></section>
+
+	<p class="badge"><a href="https://github.com/litac">LITaC на Github</a></p>
+	<div class="progress"><div></div></div>
+	<script src="shower/shower.min.js"></script>
+	<!-- Copyright © 2015 Eduard Pelesh, Ideil. -->
+</body>
+</html>
